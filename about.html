@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>VG | ABOUT</title>
+		
+		<meta name="description" content="The official Vasilis Gavriilidis Portfolio">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="styles.css" />
+
+		<script src="https://cdn.jsdelivr.net/npm/tsparticles"></script>
+		<script src="https://cdn.jsdelivr.net/npm/tsparticles-preset-confetti"></script>
+		<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+
+	</head>
+
+
+
+	<body>
+
+		<div id="nav" class="nav">
+			<div class="toggle"><span></span></div>
+			<div class="nav-list">
+				<ul>
+					<li><a href="index.html" style="--color: #86FB8C;" data-text="HOME">HOME</a></li>
+					<li><a href="projects.html" style="--color: #86FB8C;" data-text="PROJECTS">PROJECTS</a></li>
+					<li><a class="about" href="about.html" style="--color: #86FB8C;" data-text="ABOUT">ABOUT</a></li>
+				</ul>
+			</div>
+			<div class="nav-icons">
+				<ul>
+					<li><a href="https://github.com/vxsilis" target="_blank" ><img src="images/git_logo.png" height="40"></a></li>
+					<li><a href="https://www.linkedin.com/in/vasilis-g-397452200" target="_blank"><img src="images/linkedin_logo.png" height="40 "></a></li>
+				</ul>
+			</div>
+
+			<canvas id="canvas-full"></canvas>
+		    <div class="footer" onclick="drawcir()">
+		      <div class="ticker">
+		        <div class="ticker-text"><p>this website was made with 2 cups of sugar by VG &copy; 2021<p>
+		        </div>
+		      </div>
+		    </div>
+
+		</div>
+
+		<!---------------------->
+			<div class="icon">
+
+				<img class="vg-img" src="images/vg-n.png">
+				<p class="face-text"></p>
+
+			</div>
+
+		<div class="skatoo">
+
+
+
+		<div class="bio-section">
+			<div class="bio-list">
+
+				
+
+			<img class="bio-img" src="images/bnw_profile_folio.jpeg">
+
+				<div class="bio-text">
+					<p>
+						Currently a student at the IT department of Ionian University, building my skills around web design and relative <span class="tools trigger"></span>tools.<br /><br /> Always finding new ways to express myself, I also produce electronic music, taking pictures or designing.
+					</p>
+					<div class="links-list">
+						<div><a data-text="DESINGS" class="link" target="_blank" href="https://instagram.com/tomotivo/">DESINGS</a></div>
+						<div><a data-text="MUSIC" class="link" target="_blank" href="https://linktr.ee/bllyz">MUSIC</a></div>
+						<div><a data-text="PHOTOS" class="link" target="_blank" href="https://vsco.co/vxsiliss/">PHOTOS</a></div>
+					</div>
+				</div>
+
+
+			    <div id="pop-up">
+			       <p>
+			        <p>HTML5</p>
+			        <p>CSS3</p>
+			        <p>JS</p>
+			    	<p>WordPress</p>
+			    	<p>Photoshop</p>			    	
+			      </p>
+			      
+			    </div>
+
+				<a id="confettiBtn" class="email-btn copy" onclick="copyEmail()" ></a>
+			</div>
+
+			<div id="tsparticles"></div>
+
+		</div>
+
+
+	</div>
+
+<!---------------------->
+
+
+<script src="scripts/script.js"></script>
+<script src="scripts/tools.js"></script>
+<script src="scripts/confetti.js"></script>
+<script src="scripts/distortion.js"></script>
+
+	</body>
+</html>
