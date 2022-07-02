@@ -90,7 +90,7 @@ body{
 	top: 0;
 	width: 100%;
 	transition: 0.5s;
-	z-index: 10;
+	z-index: 103;
 	overflow:  hidden;
 	height: 50px;
 }
