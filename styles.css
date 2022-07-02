@@ -20,18 +20,9 @@ body{
 	height: 100vh;
 	 
   
-  
 
 }
-.skatoo{
-	 /* width: 100%;
-  height: 100%
-  bottom: 0px;
-  position: absolute;
-	  /*overflow-y: scroll; 
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;*/
-}
+
 /****************************************************************************/
 /****************************************************************************/
 /****************************************************************************/
@@ -191,7 +182,7 @@ body{
 .nav-list ul li a:hover:before{
 	color: var(--color);
 	-webkit-text-stroke: 0px white;
-	transform: translate(10px, -10px);
+	transform: translate(10px, -8px);
 	
 }
 
@@ -293,7 +284,7 @@ right: 0;
 	position: fixed;
 	top: 0;
 	right: 85%;
-	z-index: 10;
+	z-index: 100;
 
 }
 
@@ -316,6 +307,37 @@ right: 0;
 /****************************************************************************/
 /****************************************************************************/
 
+.word-intro{
+	position: absolute;
+	color: white;
+	font-size: 2rem;
+	font-weight: 200;
+}
+
+
+.create{
+	top: 15%;
+	opacity: 0;
+	animation: show .3s 2.3s forwards;
+	transition: .5s;
+	
+}
+
+
+.develop{
+	right: -20px;
+    top: 60%;
+    opacity: 0;
+    animation: show .3s 2.5s forwards;
+    transition: .5s;
+}
+
+.design{
+	bottom: 20%;
+	opacity: 0;
+	animation: show .3s 2.1s forwards;
+	transition: .5s;
+}
 
 .intro-container{	
 	/*background-image: url(images/o1.jpg);*/
@@ -328,10 +350,10 @@ right: 0;
 }
 
 .intro-circle{
-	background-color: white;
+	background-color: #EF793E;
 	background-image: url('images/wave-intro.png');
-	width: 600px;
-	height: 600px;
+	width: 560px;
+	height: 560px;
 	border-radius: 100%;
 	position: absolute;
 	top: 50%;
@@ -343,7 +365,12 @@ right: 0;
 
     background-repeat: repeat-x;
   background-position: 0% 100%;
-  animation: wave-up 1.3s;
+  animation: wave-up 2s , scale .5s ease;
+}
+
+@keyframes scale{
+	0%{transform: translate(-50%,-50%) scale(0);}
+	100%{transform: translate(-50%,-50%) scale(1);}
 }
 
 
@@ -353,7 +380,7 @@ right: 0;
 }
 
 
-.intro-list{
+.intro-list{ /* olo to keimeno */
 	position: relative;
 	top: 50%;
 	left: 50%;
@@ -365,35 +392,59 @@ right: 0;
 
 
 
-.intro-text{
+.intro-text{ /* HI MY NAME IS */
 	position: relative;
 	left: 50%;
-	transform: translate(-50%, 12%);
+	transform: translate(-51%, 40%);
 	text-transform: lowercase;
-	text-align: justify;
+	text-align: center;
 	color: white;
-	padding: 20px;
+	
 	
 	max-width: 65%;
 	
 	font-weight: 600;	
-	font-size: 2.5em;
-	line-height: 100%;
+	font-size: 2.1rem;
+	line-height: 90%;
 
-	animation: upintro .4s .40s forwards;
+	opacity: 0;
+	animation: upintro .7s .7s forwards, show .6s .8s forwards;
+
+	/**/
 
 	
 }
 
 
-
-@keyframes upintro{
-	0%{transform: translate(-50%, 12%);}
-	100%{transform: translate(-50%, 0%);}
+.intro-text-name{ /* VASILIS */
+	color: white;
+	font-size: 4.7rem;
+	font-weight: 700;	
+	text-align: center;
+	text-shadow: -8px 6px 0px #EF793E;
+	opacity: 0;
+	animation: upintrov .7s .7s forwards, show .6s .9s 1 forwards;
 }
 
 
-.intro-button{
+@keyframes show{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+
+@keyframes upintro{
+	0%{transform: translate(-51%, 40%);}
+	100%{transform: translate(-51%, 0%);}
+}
+
+@keyframes upintrov{
+	0%{transform: translateY(40%);}
+	100%{transform: translateY(0%);}
+}
+
+
+.intro-button{ /* button */
 	font-weight: 600;	
 	position: relative;
 	letter-spacing: 0px;
@@ -422,7 +473,7 @@ right: 0;
 
   transition: 1s ;
 opacity: 0;
-  animation: show .6s .65s 1 forwards;
+  animation: show .6s 1.5s 1 forwards;
   
 
 
@@ -430,10 +481,7 @@ opacity: 0;
 
 
 
-@keyframes show{
-	0%{opacity: 0;}
-	100%{opacity: 1;}
-}
+
 
 
 
@@ -481,18 +529,19 @@ opacity: 0;
 	position: relative;
 	top: 50%;
   	left: 50%;
-  	transform: translate(-50%, -50%); 
-
-  	animation: fade 1.3s forwards;
   	
+
+  	/*animation: fade 1.3s forwards;*/
+  	opacity: 1;
+  	transform: translate(-50%, -50%); 
 
 }
 
 
 
 @keyframes fade{
-	0%{opacity: 0; transform: translate(-50%, -47%); }
-	90%{opacity: 1; transform: translate(-50%, -50%); }
+	0%{transform: translate(-50%, -47%); }
+
 	100%{opacity: 1; transform: translate(-50%, -50%); }
 }
 
@@ -545,8 +594,14 @@ i{
 	font-size: 3rem;
 	font-weight: 1000;
 	align-self: center;
+	
+text-shadow: -8px 6px 0px black;
 }
 
+
+#pr3 .pr-container .pr-desc .pr-title{
+	line-height: 60px;
+}
 
 .pr-title-soon{
 	grid-area: title;
@@ -608,64 +663,7 @@ transition: 1s ease;
 	text-align: justify;
 }
 
-/**** 		ARROWS		 ****/
 
-.up-arrow{
-	filter: brightness(0);
-	margin-bottom: 30px;
-	height: 15px;
-	animation: arrow-up 2.1s infinite;
-}
-
-.up-arrow img{
-	transform: translateX(-50%);
-	position: relative;
-	left: 50%;
-	transition: .3s;
-	
-}
-
-.up-arrow img:hover{
-	cursor: pointer;
-	opacity: .7;
-	transition: .3s;
-}
-
-
-.down-arrow{
-	filter: brightness(0);
-	margin-top: 20px;
-	height: 15px;
-	animation: arrow-down 2s infinite;
-}
-
-.down-arrow img{
-	transform: translateX(-50%);
-	position: relative;
-	left: 50%;
-	transition: .3s;
-	
-}
-
-.down-arrow img:hover{
-	cursor: pointer;
-	transition: .3s;
-	opacity: .7;
-}
-
-
-@keyframes arrow-down {
-  0% {transform: translateY(0);}
-  50% {transform: translateY(6px);}
-  100% {transform: translateY(0);}
-}
-
-
-@keyframes arrow-up {
-  0% {transform: translateY(0);}
-  60% {transform: translateY(-6px);}
-  100% {transform: translateY(0);}
-}
 
 .slider {
 	
@@ -674,9 +672,6 @@ transition: 1s ease;
 	-webkit-overflow-scrolling: touch;
 	overflow-y: scroll;
 }
-
-
-
 
 
 
@@ -689,9 +684,11 @@ transition: 1s ease;
     
   height:4rem;
   width:3rem;
-  position: absolute;
-right: 25px;
-    bottom: 10px;
+  position: fixed;
+right: calc(50% - 13vw);
+    bottom: 2vh;
+    z-index: 1000;
+    transition: 1s;
 }
 
 
@@ -726,6 +723,36 @@ right: 25px;
   75%  { transform: translateY(.75em); opacity: 0; }
   100% { transform: translateY(0); opacity: 0; }
 }
+
+/** AUTA EVALA TWRA */
+
+
+#slides-holder{
+	width: 65vw;
+}
+
+#slides-holder,.slide{
+    position:relative;
+    
+}
+ .slide,.slide.fixed{
+    top:0;
+    left:0;
+    
+}
+
+
+ .slide.fixed{
+    position:fixed
+}
+ .slide-fake-height{
+    position:relative;
+    display:none
+}
+ .slide-fake-height.visible{
+    display:block
+}
+
 
 
 
@@ -796,7 +823,7 @@ right: 25px;
 	transform: skewY(-10deg) translateX(-8px);
 	position: absolute;
 	height: 33px;
-	width: 90px;
+	width: 80px;
 	cursor: e-resize;
 	z-index: 0;
 }
@@ -830,40 +857,41 @@ right: 25px;
 
 
 .link{
+	position: relative;
 	text-decoration: none;
 	font-weight: 800;
 	color: pink;
+	transition: .2s;
+	text-shadow: -4px 3px 0px white;
 
 
 }
 
-.link:after{
+.link:hover{
 	
-	content: attr(data-text);
+	transition: .2s;
 	color: white;
-	position: absolute;
-	transform: translate(5px,-42.8px);
-	display: block;
-
+	text-shadow: -4px 3px 0px pink;
 }
+
 
 .link:before{
-	
 	content: '';
-	width: 100%;
-	
+	width: 97%;
 	position: relative;
 	display: block;
 	border: 1px dashed #4646F0;
-	transform: translateY(40px);
-	
-	
-
+	transform: translate(2px,40px);
+	transition: .2s;
 }
 
 
 
-
+.link:hover::before{
+	transition: .1s;
+	/*transform: translate(2px,30px);
+	opacity: 0;*/
+}
 
 
 .email-btn {
@@ -1130,6 +1158,7 @@ right: 25px;
 	width: 100%;
 	height: 100%;
 	bottom: 0;
+	border-bottom: 5px solid white ;
 
 }
 
@@ -1159,16 +1188,9 @@ right: 25px;
 @media (max-width: 768px) {
 
 .link:after{
-	
-
 	transform: translate(5px,-33px);
 	
-	
-
 }
-
-
-
 
 .bio-text{
 	font-size: max(4vw,20px);
@@ -1196,14 +1218,20 @@ right: 25px;
 
 }
 
+@media (max-width: 483px) {
+
+	.pr-title{
+		
+		line-height: 50px;
+	}
+
+}
 
 @media (max-width: 445px) {
 
-.bio-img{
-	height: max(150px,50vw);
-}
-
-
+	.bio-img{
+		height: max(150px,50vw);
+	}
 
 
 
@@ -1318,7 +1346,7 @@ right: 25px;
 		position: fixed;
 		top: 0;
 		left: 0;
-		z-index: 10;
+		z-index: 10000;
 
 	}
 

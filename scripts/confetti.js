@@ -12,11 +12,13 @@ function copyEmail(){
 }
 
 
+
+
 confettiBtn.addEventListener("click", () => {
   confetti("tsparticles", {
     angle: 90,
     count: 40,
-    position: { x: 50, y:70 },
+    position: { x: 33, y:70 },
     spread: 90,
     startVelocity: 60,
     decay: 0.9,
@@ -30,3 +32,4 @@ confettiBtn.addEventListener("click", () => {
     disableForReducedMotion: true
   });
 });
+
